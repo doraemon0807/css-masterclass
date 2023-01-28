@@ -46,14 +46,14 @@ header {
         color: $black;
         cursor: pointer;
         @extend %miniTitle;
-        &:hover {
-          opacity: 0.5;
-        }
       }
       &:first-child {
         justify-content: flex-start;
         li {
           margin-right: 50px;
+          &:hover {
+            opacity: 0.5;
+          }
         }
       }
       &:nth-child(2) {
@@ -143,6 +143,9 @@ header {
   div {
     width: 50%;
   }
+  img {
+    cursor: pointer;
+  }
 }
 
 .blog {
@@ -162,6 +165,7 @@ header {
     img {
       width: 100%;
       height: 55vh;
+      cursor: pointer;
     }
     .post__content {
       background-color: $blogBg;
