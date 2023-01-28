@@ -1,0 +1,44 @@
+%miniTitle {
+  font-family: "Montserrat";
+  font-weight: 600;
+  letter-spacing: 1.3;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+%miniDescription {
+  font-family: "Source Serif Pro";
+  font-weight: 300;
+  font-size: 40px;
+  text-align: center;
+}
+
+%miniDescriptionSmall {
+  font-family: "Source Serif Pro";
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+}
+
+@mixin miniLink($color) {
+  @extend %miniTitle;
+  background-color: transparent;
+  padding: 20px 70px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.1s linear, background 0.1s linear;
+
+  @if $color == "white" {
+    border: 1px solid white;
+    &:hover {
+      background-color: white;
+      color: $black;
+    }
+  } @else {
+    border: 1px solid $black;
+    &:hover {
+      background-color: $black;
+      color: white;
+    }
+  }
+}
