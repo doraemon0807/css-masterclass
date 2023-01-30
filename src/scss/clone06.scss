@@ -150,7 +150,7 @@ main {
       }
 
       &:hover .gallery__image::before {
-        backdrop-filter: blur(25px) brightness(120%);
+        backdrop-filter: blur(25px) brightness(130%);
       }
 
       &:hover .gallery__text {
@@ -190,6 +190,7 @@ main {
         opacity: 0;
         transition: opacity 0.1s linear;
         text-shadow: white 1px 1px 0;
+        color: black;
         span {
           margin-bottom: 10px;
           &:first-child {
