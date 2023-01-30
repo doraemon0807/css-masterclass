@@ -1,3 +1,4 @@
+@import "styles";
 @import "reset";
 @import "_clone05var.scss";
 @import "_clone05elements.scss";
@@ -165,6 +166,7 @@ main {
       grid-column-start: span 1;
       .product__description {
         font-size: 24px;
+        padding-right: 20px;
       }
     }
   }
