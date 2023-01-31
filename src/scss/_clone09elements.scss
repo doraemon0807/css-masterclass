@@ -1,0 +1,9 @@
+%tinyText {
+  font-size: 12px;
+  font-family: "Roboto";
+}
+
+%grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr 5fr 0.5fr;
+}
