@@ -1,0 +1,70 @@
+%smallText {
+  font-family: "roboto";
+  letter-spacing: 3px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+%dashedBg {
+  background-image: linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%;
+  background-repeat: repeat-x, repeat-x;
+  background-size: 24px 1px, 24px 1px;
+  animation: dashed 0.8s linear infinite;
+}
+
+@mixin dashedBg($direction) {
+  background-image: linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%;
+  background-repeat: repeat-x, repeat-x;
+  background-size: 24px 1px, 24px 1px;
+  @if $direction== "forward" {
+    animation: dashed 0.8s linear infinite;
+  } @else {
+    animation: dashedB 0.8s linear infinite;
+  }
+}
+
+%dashedBgRect {
+  background-image: linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(180deg, #000 50%, transparent 0),
+    linear-gradient(180deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
+  animation: dashedRect 0.4s linear infinite;
+  animation-play-state: paused;
+  &:hover {
+    animation-play-state: running;
+  }
+}
+
+@keyframes dashed {
+  0% {
+    background-position: 0 0, 0 100%;
+  }
+  100% {
+    background-position: 24px 0, 24px 100%;
+  }
+}
+
+@keyframes dashedB {
+  0% {
+    background-position: 0 0, 0 100%;
+  }
+  100% {
+    background-position: -24px 0, -24px 100%;
+  }
+}
+
+@keyframes dashedRect {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+  100% {
+    background-position: 30px 0, -30px 100%, 0 -30px, 100% 30px;
+  }
+}
