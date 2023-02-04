@@ -2,6 +2,7 @@
 @import "reset";
 @import "_clone05var.scss";
 @import "_clone05elements.scss";
+@import "_cloneImages";
 
 * {
   box-sizing: border-box;
@@ -73,7 +74,6 @@ main {
   .hero__photo {
     height: 70vh;
     width: 90%;
-    background-image: url("https://source.unsplash.com/random/");
     margin-bottom: 60px;
   }
   .hero__text {
@@ -117,13 +117,13 @@ main {
   .product {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 20px;
     padding: 20px 0;
     border-top: $border;
     grid-column-start: span 2;
 
     &:nth-child(even) {
-      div {
+      div:first-child {
         order: 1;
       }
     }
@@ -134,17 +134,30 @@ main {
     .product__description {
       margin-bottom: 60px;
     }
+    .product__image {
+      width: 500px;
+      height: 330px;
+    }
   }
   .line {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-column-start: span 2;
     margin-bottom: 50px;
-    .product {
-      grid-template-columns: 1fr;
-      grid-column-start: span 1;
-      .product__description {
-        font-size: 24px;
+    border-top: $border;
+
+    .line__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      .product {
+        border-top: none;
+        grid-template-columns: 1fr;
+        grid-column-start: span 1;
+
+        .product__description {
+          font-size: 24px;
+        }
       }
     }
   }

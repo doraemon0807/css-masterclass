@@ -2,6 +2,7 @@
 @import "styles";
 @import "_clone10var";
 @import "_clone10elements";
+@import "_cloneImages";
 
 * {
   box-sizing: border-box;
@@ -146,9 +147,6 @@ main {
     .hero__image {
       width: 100%;
       height: 100vh;
-      background-image: url("https://source.unsplash.com/random/1");
-      background-position: center center;
-      background-size: cover;
     }
   }
 
@@ -174,9 +172,6 @@ main {
           .market__img {
             width: 100%;
             height: 100%;
-            background-image: url("https://source.unsplash.com/random/2");
-            background-position: center center;
-            background-size: cover;
           }
           .market__text {
             @extend %smallText;
@@ -266,9 +261,6 @@ main {
         .location__map__image {
           width: 100%;
           height: 100%;
-          background-image: url("https://source.unsplash.com/random/3");
-          background-position: center center;
-          background-size: cover;
         }
       }
     }

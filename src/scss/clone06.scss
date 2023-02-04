@@ -1,6 +1,7 @@
 @import "reset";
 @import "styles";
 @import "_clone06elements";
+@import "_cloneImages";
 
 * {
   box-sizing: border-box;
@@ -84,12 +85,6 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: calc(100vh - 60px);
-
-    .hero__img {
-      background-image: url("https://source.unsplash.com/random/");
-      background-position: center center;
-      background-size: cover;
-    }
     .hero__text {
       place-self: center center;
       display: flex;
@@ -161,9 +156,6 @@ main {
       .gallery__image {
         width: 100%;
         height: 100%;
-        background-image: url("https://source.unsplash.com/random/");
-        background-position: center center;
-        background-size: cover;
         position: relative;
 
         &::before {
@@ -189,7 +181,7 @@ main {
         font-size: 22px;
         opacity: 0;
         transition: opacity 0.1s linear;
-        text-shadow: white 1px 1px 0;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
         color: black;
         span {
           margin-bottom: 10px;
